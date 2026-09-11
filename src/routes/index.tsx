@@ -104,8 +104,8 @@ function LandingPage() {
             aria-hidden="true"
             className="pointer-events-none absolute left-1/2 top-[-12rem] h-[28rem] w-[28rem] -translate-x-1/2 rounded-full bg-gold/10 blur-[120px]"
           />
-          <div className="relative mx-auto grid w-full max-w-[1200px] items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
-            <Reveal className="order-1 flex flex-col">
+          <div className="relative mx-auto grid w-full max-w-[1200px] items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+            <Reveal className="order-1 flex flex-col lg:col-start-1 lg:row-start-1">
               <span className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-gold">
                 Ebook · Método prático
               </span>
@@ -121,25 +121,13 @@ function LandingPage() {
                 O Código da Procrastinação é um método prático para você entender o ciclo que te
                 prende e começar a agir de forma mais consistente.
               </p>
-
-              <div className="order-3 mt-8 lg:order-none">
-                <div className="inline-flex items-baseline gap-2 rounded-2xl border border-gold/25 bg-surface px-5 py-4 shadow-soft">
-                  <span className="text-sm text-muted-foreground">Hoje por apenas</span>
-                  <span className="text-3xl font-extrabold text-gold sm:text-4xl">R$9,90</span>
-                </div>
-                <TrustLine className="mt-4" />
-              </div>
-
-              <div className="order-4 mt-8 max-w-md lg:order-none">
-                <CheckoutButton>Quero acessar o código por R$9,90</CheckoutButton>
-                <p className="mt-3 text-center text-xs text-muted-foreground">
-                  Pagamento único • Acesso digital
-                </p>
-              </div>
             </Reveal>
 
-            <Reveal delay={120} className="order-2 flex justify-center lg:order-none">
-              <div className="relative w-full max-w-sm">
+            <Reveal
+              delay={120}
+              className="order-2 flex justify-center lg:col-start-2 lg:row-span-2 lg:row-start-1"
+            >
+              <div className="relative w-full max-w-[16rem] sm:max-w-sm">
                 <div
                   aria-hidden="true"
                   className="absolute inset-6 rounded-[2rem] bg-gold/15 blur-3xl"
@@ -153,6 +141,24 @@ function LandingPage() {
                 />
               </div>
             </Reveal>
+
+            <Reveal
+              delay={60}
+              className="order-3 flex flex-col lg:col-start-1 lg:row-start-2 lg:-mt-4"
+            >
+              <div className="inline-flex w-fit items-baseline gap-2 rounded-2xl border border-gold/25 bg-surface px-5 py-4 shadow-soft">
+                <span className="text-sm text-muted-foreground">Hoje por apenas</span>
+                <span className="text-3xl font-extrabold text-gold sm:text-4xl">R$9,90</span>
+              </div>
+              <TrustLine className="mt-4" />
+              <div className="mt-8 max-w-md">
+                <CheckoutButton>Quero acessar o código por R$9,90</CheckoutButton>
+                <p className="mt-3 text-center text-xs text-muted-foreground">
+                  Pagamento único • Acesso digital
+                </p>
+              </div>
+            </Reveal>
+
           </div>
         </section>
 
