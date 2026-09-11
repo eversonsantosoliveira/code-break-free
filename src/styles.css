@@ -92,8 +92,28 @@
     border-color: var(--color-border);
   }
 
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
 }
+
+@utility text-gradient-gold {
+  background: linear-gradient(100deg, var(--gold-soft), var(--gold) 55%, var(--gold-soft));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility hairline-gold {
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
